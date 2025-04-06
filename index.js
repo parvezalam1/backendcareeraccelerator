@@ -1,14 +1,14 @@
 const express=require('express')
 const dotevn=require('dotenv')
 const cors=require('cors')
-dotevn.config()
 const app=express();
 const mongoose=require('mongoose')
 const PORT=process.env.PORT || 5000;
 const User= require("./model/Users")
 let bcrypted=require('bcrypt');
 
-// app.use(cors())
+dotevn.config()
+app.use(cors())
 app.use(express.json())
 const connect = () => {
     mongoose.connect(process.env.MONGOOSE_URL)
