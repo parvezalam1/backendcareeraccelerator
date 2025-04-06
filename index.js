@@ -8,7 +8,7 @@ const PORT=process.env.PORT || 5000;
 const User= require("./model/Users")
 let bcrypted=require('bcrypt');
 
-app.use(cors())
+// app.use(cors())
 app.use(express.json())
 const connect = () => {
     mongoose.connect(process.env.MONGOOSE_URL)
